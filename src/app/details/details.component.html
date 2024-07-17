@@ -1,0 +1,28 @@
+<article>
+  <img
+    class="personal-photo"
+    src="https://robohash.org/{{ user?.id }}?set=set2&size=300x300"
+    alt="monster {{ user?.name }}"
+  />
+  <section class="personal-description">
+    <h2 class="personal-heading">{{ user?.name }}</h2>
+    <h3>{{ user?.email }}</h3>
+    <p>Phone: {{ user?.phone }}</p>
+
+    <p>Address</p>
+    <p>{{ user?.address?.street }}, Suite {{ user?.address?.suite }}</p>
+    <p>{{ user?.address?.city }}, {{ user?.address?.zipcode }}</p>
+    <p>
+      Geo: lat {{ user?.address?.geo?.lat }}, lng
+      {{ user?.address?.geo?.lng }}
+    </p>
+  </section>
+  <section class="company-description">
+    <h2 class="section-heading">Company details</h2>
+
+    <p>Company: {{ user?.company?.name }}</p>
+    <p>Motto: {{ user?.company?.catchPhrase }}</p>
+    <p>Business description: {{ user?.company?.bs }}</p>
+    <p>Website: {{ user?.website }}</p>
+  </section>
+</article>
